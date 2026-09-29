@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Generate SEO-friendly blog hooks, headers, introductions and practical SEO tips with AI.">
+    <title>SEO Blog Intro Generator</title>
+    <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+    <header class="site-header">
+        <div class="container nav">
+            <a class="brand" href="/">
+                <span class="brand-mark">S</span>
+                <span>SEO Blog Intro Generator</span>
+            </a>
+            <span class="badge">AI Writing Tool</span>
+        </div>
+    </header>
+
+    <main>
+        <section class="hero">
+            <div class="container hero-inner">
+                <div class="hero-copy">
+                    <span class="eyebrow">SEO CONTENT ASSISTANT</span>
+                    <h1>Turn a keyword into a stronger blog opening.</h1>
+                    <p>
+                        Enter your target keyword and article topic. The generator creates
+                        an engaging hook, a useful article outline, an optimized introduction,
+                        and practical SEO tips.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <section class="workspace container">
+            <div class="generator-card">
+                <div class="section-heading">
+                    <div>
+                        <span class="step">01</span>
+                        <h2>Content details</h2>
+                    </div>
+                    <p>Give the AI enough context to write a focused introduction.</p>
+                </div>
+
+                <form id="generatorForm">
+                    <div class="form-grid">
+                        <div class="field field-full">
+                            <label for="keyword">Target keyword</label>
+                            <input
+                                id="keyword"
+                                name="keyword"
+                                type="text"
+                                maxlength="120"
+                                placeholder="e.g. small business automation"
+                                required
+                            >
+                            <small>The main search phrase you want to target.</small>
+                        </div>
+
+                        <div class="field field-full">
+                            <label for="topic">Article topic</label>
+                            <textarea
+                                id="topic"
+                                name="topic"
+                                maxlength="250"
+                                rows="4"
+                                placeholder="e.g. How automation can help small businesses save time and reduce repetitive work"
+                                required
+                            ></textarea>
+                            <small>Describe what the article will cover.</small>
+                        </div>
+
+                        <div class="field">
+                            <label for="tone">Writing tone</label>
+                            <select id="tone" name="tone">
+                                <option>Professional</option>
+                                <option>Friendly</option>
+                                <option>Informative</option>
+                                <option>Engaging</option>
+                                <option>Conversational</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="form-actions">
+                        <button id="generateBtn" class="primary-btn" type="submit">
+                            <span id="buttonText">Generate content</span>
+                            <span id="spinner" class="spinner hidden"></span>
+                        </button>
+                        <button id="clearBtn" class="secondary-btn" type="button">Clear</button>
+                    </div>
+                </form>
+
+                <div id="errorBox" class="error-box hidden" role="alert"></div>
+            </div>
+
+            <div id="results" class="results hidden">
+                <div class="results-heading">
+                    <div>
+                        <span class="step">02</span>
+                        <h2>Your SEO content</h2>
+                    </div>
+                    <button id="copyAllBtn" class="copy-all-btn" type="button">Copy all</button>
+                </div>
+
+                <div class="result-grid">
+                    <article class="result-card featured">
+                        <div class="card-top">
+                            <span class="result-label">HOOK</span>
+                            <button class="copy-btn" data-copy-target="hook">Copy</button>
+                        </div>
+                        <p id="hook" class="hook-text"></p>
+                    </article>
+
+                    <article class="result-card">
+                        <div class="card-top">
+                            <span class="result-label">ARTICLE OUTLINE</span>
+                            <button class="copy-btn" data-copy-target="headers">Copy</button>
+                        </div>
+                        <ol id="headers" class="headers-list"></ol>
+                    </article>
+
+                    <article class="result-card intro-card">
+                        <div class="card-top">
+                            <span class="result-label">SEO INTRODUCTION</span>
+                            <button class="copy-btn" data-copy-target="introduction">Copy</button>
+                        </div>
+                        <p id="introduction"></p>
+                    </article>
+
+                    <article class="result-card">
+                        <div class="card-top">
+                            <span class="result-label">SEO TIPS</span>
+                            <button class="copy-btn" data-copy-target="tips">Copy</button>
+                        </div>
+                        <ul id="tips" class="tips-list"></ul>
+                    </article>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <div class="container">
+            <span>SEO Blog Intro Generator</span>
+            <span>Built with HTML, CSS, JavaScript, Python &amp; AI</span>
+        </div>
+    </footer>
+
+    <script src="/script.js"></script>
+</body>
+</html>
