@@ -1,6 +1,6 @@
 # SEO Blog Intro Generator
 
-A simple CAPACITI full-stack project that generates SEO-friendly blog hooks, article outlines, introductions and SEO tips.
+A simple full-stack project that generates SEO-friendly blog hooks, article outlines, introductions and SEO tips.
 
 ## Tech stack
 
